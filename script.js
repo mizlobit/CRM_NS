@@ -103,3 +103,24 @@ document.querySelectorAll(".faq-item button").forEach(button => {
     button.querySelector("b").textContent = open ? "−" : "+";
   });
 });
+
+
+document.querySelectorAll(".process-item > button").forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".process-item");
+    const opening = !item.classList.contains("open");
+
+    document.querySelectorAll(".process-item").forEach(other => {
+      other.classList.remove("open");
+      const otherButton = other.querySelector("button");
+      otherButton.setAttribute("aria-expanded", "false");
+      otherButton.querySelector("b").textContent = "⌄";
+    });
+
+    if (opening) {
+      item.classList.add("open");
+      button.setAttribute("aria-expanded", "true");
+      button.querySelector("b").textContent = "⌃";
+    }
+  });
+});

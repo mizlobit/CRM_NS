@@ -94,13 +94,55 @@
         <h2>Каждый день ваш бизнес производит тысячи действий</h2>
       </div>
 
-      <div class="flow-list reveal">
-        <article><i>♙</i><span>Появляются клиенты</span><b>›</b></article>
-        <article><i>▤</i><span>Появляются заявки</span><b>›</b></article>
-        <article><i>▣</i><span>Создаются документы</span><b>›</b></article>
-        <article><i>♚</i><span>Работают сотрудники</span><b>›</b></article>
-        <article><i>₽</i><span>Проходят оплаты</span><b>›</b></article>
-        <article><i>⌁</i><span>Принимаются решения</span><b>›</b></article>
+      <div class="flow-list reveal" id="processAccordion">
+        <article class="process-item">
+          <button type="button" aria-expanded="false">
+            <i aria-hidden="true">👤</i>
+            <span>Появляются клиенты</span>
+            <b>⌄</b>
+          </button>
+          <div class="process-detail">Клиенты приходят из рекламы, рекомендаций, сайта и мессенджеров. Система сохраняет источник и историю каждого обращения.</div>
+        </article>
+        <article class="process-item">
+          <button type="button" aria-expanded="false">
+            <i aria-hidden="true">📥</i>
+            <span>Появляются заявки</span>
+            <b>⌄</b>
+          </button>
+          <div class="process-detail">Обращения из разных каналов собираются в единой очереди. Видно ответственного, скорость ответа и просроченные заявки.</div>
+        </article>
+        <article class="process-item">
+          <button type="button" aria-expanded="false">
+            <i aria-hidden="true">📄</i>
+            <span>Создаются документы</span>
+            <b>⌄</b>
+          </button>
+          <div class="process-detail">Счета, договоры и коммерческие предложения формируются по шаблонам и сохраняются в карточке клиента.</div>
+        </article>
+        <article class="process-item">
+          <button type="button" aria-expanded="false">
+            <i aria-hidden="true">👥</i>
+            <span>Работают сотрудники</span>
+            <b>⌄</b>
+          </button>
+          <div class="process-detail">Каждый сотрудник видит свои задачи, сроки и приоритеты. Руководитель контролирует нагрузку и результат без постоянных напоминаний.</div>
+        </article>
+        <article class="process-item">
+          <button type="button" aria-expanded="false">
+            <i aria-hidden="true">₽</i>
+            <span>Проходят оплаты</span>
+            <b>⌄</b>
+          </button>
+          <div class="process-detail">Система фиксирует оплаты, задолженности и движение денег, а также автоматически меняет статус сделки.</div>
+        </article>
+        <article class="process-item">
+          <button type="button" aria-expanded="false">
+            <i aria-hidden="true">📈</i>
+            <span>Принимаются решения</span>
+            <b>⌄</b>
+          </button>
+          <div class="process-detail">Руководитель видит ключевые показатели в реальном времени и принимает решения на основе данных, а не догадок.</div>
+        </article>
       </div>
 
       <div class="choice-box reveal">
@@ -306,12 +348,12 @@
       </div>
 
       <div class="ai-chat reveal">
-        <div><span>◇</span><p>Какая прибыль за сегодня?</p></div>
-        <div class="answer"><p>Сегодня прибыль составила 184 500 ₽</p></div>
-        <div><span>◇</span><p>Сколько заявок просрочено?</p></div>
-        <div class="answer"><p>Просрочено 4 заявки</p></div>
-        <div><span>◇</span><p>Кто лучший менеджер?</p></div>
-        <div class="answer"><p>Иван выполнил план на 138%</p></div>
+        <div class="ai-row ai-row-question"><span class="ai-avatar" aria-hidden="true">AI</span><p class="ai-message ai-message-question">Какая прибыль за сегодня?</p></div>
+        <div class="ai-row ai-row-answer"><p class="ai-message ai-message-answer">Сегодня прибыль составила 184 500 ₽</p></div>
+        <div class="ai-row ai-row-question"><span class="ai-avatar" aria-hidden="true">AI</span><p class="ai-message ai-message-question">Сколько заявок просрочено?</p></div>
+        <div class="ai-row ai-row-answer"><p class="ai-message ai-message-answer">Просрочено 4 заявки</p></div>
+        <div class="ai-row ai-row-question"><span class="ai-avatar" aria-hidden="true">AI</span><p class="ai-message ai-message-question">Кто лучший менеджер?</p></div>
+        <div class="ai-row ai-row-answer"><p class="ai-message ai-message-answer">Иван выполнил план на 138%</p></div>
       </div>
     </section>
 
@@ -456,5 +498,15 @@
   </footer>
 
   <script src="script.js"></script>
+<script>
+window.addEventListener("load", function () {
+  requestAnimationFrame(function () {
+    document.documentElement.dataset.viewportWidth = String(window.innerWidth);
+    document.documentElement.dataset.scrollWidth = String(document.documentElement.scrollWidth);
+    document.documentElement.dataset.noHorizontalOverflow =
+      String(document.documentElement.scrollWidth <= window.innerWidth + 1);
+  });
+});
+</script>
 </body>
 </html>
