@@ -78,19 +78,19 @@ form.addEventListener("submit", event => {
 document.querySelectorAll(".feature-trigger").forEach(trigger => {
   trigger.addEventListener("click", () => {
     const item = trigger.closest(".feature-item");
-    const isOpen = item.classList.contains("open");
+    const opening = !item.classList.contains("open");
 
     document.querySelectorAll(".feature-item").forEach(other => {
       other.classList.remove("open");
       const otherTrigger = other.querySelector(".feature-trigger");
       otherTrigger.setAttribute("aria-expanded", "false");
-      otherTrigger.querySelector("b").textContent = "⌄";
+      otherTrigger.querySelector("b").textContent = "+";
     });
 
-    if (!isOpen) {
+    if (opening) {
       item.classList.add("open");
       trigger.setAttribute("aria-expanded", "true");
-      trigger.querySelector("b").textContent = "⌃";
+      trigger.querySelector("b").textContent = "−";
     }
   });
 });

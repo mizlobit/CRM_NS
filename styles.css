@@ -743,3 +743,88 @@ p,
 *{
   overflow-wrap:break-word;
 }
+
+
+/* =========================================================
+   ACCORDION FIX — compact FAQ-style feature cards
+   ========================================================= */
+
+.feature-item{
+  min-height:0;
+  overflow:hidden;
+}
+
+.feature-trigger{
+  min-height:112px;
+  width:100%;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.feature-trigger b{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  background:#101d32;
+  display:grid;
+  place-items:center;
+  font-size:26px;
+  line-height:1;
+  color:#AAB3C5;
+}
+
+/* Important: cancel the previous grid-row animation that created empty space */
+.feature-content,
+.feature-item.open .feature-content{
+  display:block;
+  grid-template-rows:none;
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  padding:0 20px;
+  transition:
+    max-height .25s ease,
+    opacity .2s ease,
+    padding .25s ease;
+}
+
+.feature-content > *{
+  overflow:visible;
+}
+
+.feature-item.open .feature-content{
+  max-height:900px;
+  opacity:1;
+  padding:0 20px 20px;
+}
+
+.feature-item.open .feature-trigger{
+  border-bottom:1px solid var(--line);
+  margin-bottom:18px;
+}
+
+.feature-item.open .feature-trigger b{
+  background:rgba(53,92,255,.15);
+  color:#F5F7FF;
+}
+
+@media(max-width:699px){
+  .feature-trigger{
+    grid-template-columns:64px minmax(0,1fr) 44px;
+  }
+
+  .feature-trigger strong{
+    font-size:21px;
+  }
+
+  .feature-trigger small{
+    font-size:16px;
+    line-height:1.4;
+  }
+
+  .feature-content p{
+    margin-top:0;
+  }
+}
