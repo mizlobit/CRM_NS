@@ -116,27 +116,152 @@
     <section class="section" id="automation">
       <div class="section-title reveal">
         <h2>Что можно автоматизировать</h2>
+        <p>Нажмите на функцию, чтобы увидеть подробности и результат для бизнеса.</p>
       </div>
 
-      <div class="automation-grid reveal">
-        <article><i>⌁</i><span>Продажи</span></article>
-        <article><i>▤</i><span>Заявки</span></article>
-        <article><i>◎</i><span>CRM</span></article>
-        <article><i>♚</i><span>Производство</span></article>
-        <article><i>▣</i><span>Склад</span></article>
-        <article><i>₽</i><span>Финансы</span></article>
-        <article><i>▤</i><span>Документы</span></article>
-        <article><i>⌁</i><span>KPI сотрудников</span></article>
-        <article><i>➤</i><span>Telegram</span></article>
-        <article><i>●</i><span>WhatsApp</span></article>
-        <article><i>▥</i><span>Отчёты</span></article>
-        <article><i>⌁</i><span>Аналитика</span></article>
-        <article><i>AI</i><span>AI-помощники</span></article>
-        <article><i>◔</i><span>Напоминания</span></article>
-        <article><i>◇</i><span>Согласования</span></article>
-        <article><i>♙</i><span>Личные кабинеты</span></article>
-        <article><i>∞</i><span>Интеграции</span></article>
-        <article><i>•••</i><span>И многое другое</span></article>
+      <div class="feature-accordion reveal" id="featureAccordion">
+        <article class="feature-item open">
+          <button class="feature-trigger" type="button" aria-expanded="true">
+            <i>🛒</i>
+            <span><strong>Продажи</strong><small>Воронка, сделки и контроль конверсии</small></span>
+            <b>⌃</b>
+          </button>
+          <div class="feature-content">
+            <p>Управление полным циклом продаж: от первого обращения до оплаты и повторной сделки.</p>
+            <ul><li>воронка и этапы сделок;</li><li>прогноз и план продаж;</li><li>аналитика по менеджерам;</li><li>контроль потерянных клиентов.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Вы видите, где теряются деньги и кто двигает продажи вперёд.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>📋</i>
+            <span><strong>Заявки</strong><small>Все каналы обращений в одном окне</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Заявки с сайта, Telegram, WhatsApp, почты и звонков собираются в единую очередь.</p>
+            <ul><li>автоматическое распределение;</li><li>назначение ответственных;</li><li>контроль времени ответа;</li><li>единая история обращения.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Ни один клиент не остаётся без ответа.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>👤</i>
+            <span><strong>CRM и клиенты</strong><small>Карточка клиента и история взаимодействий</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Вся информация о клиенте доступна сотруднику в одном месте.</p>
+            <ul><li>контакты и реквизиты;</li><li>сделки и оплаты;</li><li>коммуникации и документы;</li><li>сегментация клиентов.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Сотрудники не ищут данные по чатам и таблицам.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>🏭</i>
+            <span><strong>Производство</strong><small>Планирование, загрузка и контроль сроков</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Система показывает, что производится, на каком этапе находится заказ и где возникает задержка.</p>
+            <ul><li>планы и заказы;</li><li>этапы производства;</li><li>загрузка сотрудников и оборудования;</li><li>контроль качества и сроков.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Руководитель заранее видит риски срыва сроков.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>📦</i>
+            <span><strong>Склад</strong><small>Остатки, движения и уведомления</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Актуальные остатки и все перемещения товаров доступны в реальном времени.</p>
+            <ul><li>приходы и списания;</li><li>резервы под заказы;</li><li>минимальные остатки;</li><li>инвентаризация.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Меньше пересорта, дефицита и ручных сверок.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>₽</i>
+            <span><strong>Финансы</strong><small>Доходы, расходы, оплаты и задолженности</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Финансовые показатели собираются автоматически на основе сделок и операций.</p>
+            <ul><li>платежи и задолженности;</li><li>доходы и расходы;</li><li>прибыль по направлениям;</li><li>автоматические расчёты.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Руководитель видит деньги компании без ручного отчёта.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>📄</i>
+            <span><strong>Документы</strong><small>Создание, согласование и хранение</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Документы формируются по шаблонам и сохраняются в карточке клиента или сделки.</p>
+            <ul><li>договоры и счета;</li><li>автозаполнение реквизитов;</li><li>согласование и подписи;</li><li>версии и история изменений.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Документы готовятся быстрее и не теряются.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>📊</i>
+            <span><strong>KPI и аналитика</strong><small>Показатели сотрудников и бизнеса</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Панели руководителя показывают эффективность команды и ключевые показатели компании.</p>
+            <ul><li>KPI сотрудников;</li><li>планы и фактический результат;</li><li>динамика по периодам;</li><li>поиск отклонений.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Решения принимаются на основе цифр, а не ощущений.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>✈️</i>
+            <span><strong>Telegram и WhatsApp</strong><small>Боты, уведомления и работа с клиентами</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Сотрудники и клиенты получают сообщения, статусы и документы автоматически.</p>
+            <ul><li>новые заявки из мессенджеров;</li><li>автоматические ответы;</li><li>уведомления сотрудникам;</li><li>статусы заказов для клиентов.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Меньше ручных сообщений и быстрее реакция команды.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>AI</i>
+            <span><strong>AI-помощники</strong><small>Ответы, анализ и автоматическая обработка</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>AI работает с данными компании и помогает сотрудникам выполнять задачи быстрее.</p>
+            <ul><li>ответы на вопросы руководителя;</li><li>сводки и отчёты;</li><li>классификация обращений;</li><li>подготовка текстов и документов.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Сотрудники тратят меньше времени на повторяющуюся работу.</strong></div>
+          </div>
+        </article>
+
+        <article class="feature-item">
+          <button class="feature-trigger" type="button" aria-expanded="false">
+            <i>🔗</i>
+            <span><strong>Интеграции</strong><small>Связь с 1С, сайтом и другими сервисами</small></span>
+            <b>⌄</b>
+          </button>
+          <div class="feature-content">
+            <p>Разрозненные сервисы обмениваются данными без двойного ручного ввода.</p>
+            <ul><li>1С и бухгалтерия;</li><li>сайт и формы;</li><li>телефония и почта;</li><li>банки и платёжные сервисы.</li></ul>
+            <div class="feature-result"><span>Результат</span><strong>Информация обновляется автоматически во всех системах.</strong></div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -270,6 +395,40 @@
         <article><i>◷</i><div><strong>Экономия времени</strong><span>поиска информации</span></div></article>
         <article><i>◇</i><div><strong>Меньше ошибок</strong><span>благодаря автоматизации</span></div></article>
         <article><i>⌁</i><div><strong>Больше прибыли</strong><span>за счёт контроля процессов</span></div></article>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="section-title reveal">
+        <h2>Важные вопросы</h2>
+        <p>Нажмите на вопрос, чтобы раскрыть ответ.</p>
+      </div>
+
+      <div class="faq-list reveal">
+        <article class="faq-item">
+          <button type="button" aria-expanded="false"><span>Сколько времени занимает запуск?</span><b>+</b></button>
+          <div><p>Первый рабочий прототип можно показать уже через несколько дней. Срок полноценного запуска зависит от объёма системы и количества интеграций. Небольшие решения обычно запускаются поэтапно.</p></div>
+        </article>
+        <article class="faq-item">
+          <button type="button" aria-expanded="false"><span>Нужно ли обучать сотрудников?</span><b>+</b></button>
+          <div><p>Да, но обучение обычно короткое: система проектируется под привычный процесс компании. Мы показываем основные сценарии и подготавливаем понятные инструкции.</p></div>
+        </article>
+        <article class="faq-item">
+          <button type="button" aria-expanded="false"><span>Можно ли интегрировать систему с 1С?</span><b>+</b></button>
+          <div><p>Да, если используемая конфигурация 1С позволяет обмениваться данными. Также можно подключать сайт, Telegram, WhatsApp, телефонию, банки и другие сервисы.</p></div>
+        </article>
+        <article class="faq-item">
+          <button type="button" aria-expanded="false"><span>Безопасны ли данные компании?</span><b>+</b></button>
+          <div><p>Доступы разделяются по ролям, а критические операции можно журналировать. Вариант хранения и резервного копирования выбирается под требования проекта.</p></div>
+        </article>
+        <article class="faq-item">
+          <button type="button" aria-expanded="false"><span>Сколько стоит разработка?</span><b>+</b></button>
+          <div><p>Стоимость зависит от количества ролей, сценариев, интеграций и объёма данных. После бесплатного аудита вы получите структуру решения и поэтапную оценку.</p></div>
+        </article>
+        <article class="faq-item">
+          <button type="button" aria-expanded="false"><span>Что входит в бесплатный аудит?</span><b>+</b></button>
+          <div><p>Мы разбираем текущий процесс, находим узкие места, определяем, что имеет смысл автоматизировать в первую очередь, и предлагаем вариант будущей системы.</p></div>
+        </article>
       </div>
     </section>
 

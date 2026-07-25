@@ -91,3 +91,67 @@ h1 span{display:block;background:linear-gradient(90deg,#2e67ff,#8b3fff);-webkit-
 @media(max-width:380px){
   .brand-name{font-size:14px}.brand-mark{width:38px;height:38px}.header{padding:0 12px}.section{width:calc(100% - 22px)}h1{font-size:35px}.benefit-grid{grid-template-columns:1fr}.automation-grid{grid-template-columns:repeat(2,1fr)}.demo-tabs button{font-size:8px}.demo-stats{grid-template-columns:1fr}.note-2,.note-3{display:none}
 }
+
+
+/* Крупные интерактивные карточки функций */
+.feature-accordion{display:flex;flex-direction:column;gap:10px}
+.feature-item{border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#0a1526,#07101c);overflow:hidden}
+.feature-trigger{width:100%;border:0;background:transparent;padding:14px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:13px;text-align:left;cursor:pointer}
+.feature-trigger i{width:52px;height:52px;border:1px solid rgba(68,89,255,.55);border-radius:14px;display:grid;place-items:center;background:#101c33;color:#5f73ff;font-style:normal;font-weight:800;font-size:24px;flex:none}
+.feature-trigger span{display:flex;flex-direction:column;gap:5px;min-width:0}
+.feature-trigger strong{font-size:15px;line-height:1.25}
+.feature-trigger small{font-size:11px;line-height:1.45;color:var(--muted)}
+.feature-trigger b{font-size:21px;color:#8f9aae;font-weight:400}
+.feature-content{display:none;padding:0 16px 17px 81px}
+.feature-item.open .feature-content{display:block}
+.feature-content p{font-size:12px;line-height:1.65;color:#b6bfcc;margin:0 0 12px}
+.feature-content ul{list-style:none;margin:0;padding:0}
+.feature-content li{font-size:11px;line-height:1.5;color:#c3cbd7;padding:5px 0}
+.feature-content li:before{content:"✓";color:var(--green);margin-right:8px}
+.feature-result{margin-top:13px;padding:12px;border:1px solid rgba(60,93,255,.3);border-radius:11px;background:rgba(43,74,255,.07);display:flex;flex-direction:column;gap:5px}
+.feature-result span{font-size:8px;text-transform:uppercase;letter-spacing:.08em;color:#6f91ff}
+.feature-result strong{font-size:11px;line-height:1.45}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:8px}
+.faq-item{border:1px solid var(--line);border-radius:13px;background:#081321;overflow:hidden}
+.faq-item button{width:100%;border:0;background:transparent;padding:15px;display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;cursor:pointer}
+.faq-item button span{font-size:13px;font-weight:600;line-height:1.35}
+.faq-item button b{width:28px;height:28px;border-radius:8px;background:#101d32;display:grid;place-items:center;color:#8c99ad;font-size:17px;font-weight:400;flex:none}
+.faq-item>div{display:none;padding:0 15px 15px}
+.faq-item.open>div{display:block}
+.faq-item p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+
+/* Увеличение мобильных размеров */
+@media(max-width:699px){
+  .section-title h2{font-size:34px}
+  .section-title p{font-size:14px}
+  .benefit-grid article{min-height:86px;padding:14px}
+  .benefit-grid i{width:48px;height:48px;font-size:22px}
+  .benefit-grid strong{font-size:12px}
+  .benefit-grid span{font-size:10px}
+  .flow-list article{min-height:72px;padding:13px 4px}
+  .flow-list i{width:48px;height:48px;font-size:21px}
+  .flow-list span{font-size:15px;line-height:1.35}
+  .flow-list b{font-size:28px}
+  .ai-chat{gap:14px}
+  .ai-chat>div{align-items:flex-start}
+  .ai-chat span{width:44px;height:44px;font-size:14px;flex:none}
+  .ai-chat p{font-size:13px;line-height:1.5;padding:13px 14px;max-width:calc(100vw - 100px)}
+  .ai-chat .answer p{max-width:88%;font-size:13px}
+  .scenario i{width:48px;height:48px;font-size:20px}
+  .scenario strong{font-size:14px}
+  .scenario small{font-size:10px}
+  .process-list article{padding:14px}
+  .process-list article>span{width:48px;height:48px;font-size:12px}
+  .process-list strong{font-size:14px}
+  .process-list small{font-size:10px}
+  .results-list i{width:48px;height:48px;font-size:21px}
+  .results-list strong{font-size:14px}
+  .results-list span{font-size:10px}
+}
+
+@media(min-width:700px){
+  .feature-accordion{display:grid;grid-template-columns:1fr 1fr;align-items:start}
+  .feature-content{padding-left:81px}
+}

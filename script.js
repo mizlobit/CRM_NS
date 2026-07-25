@@ -73,3 +73,33 @@ form.addEventListener("submit", event => {
 
 Не храните токены Telegram-бота прямо в этом файле.
 */
+
+
+document.querySelectorAll(".feature-trigger").forEach(trigger => {
+  trigger.addEventListener("click", () => {
+    const item = trigger.closest(".feature-item");
+    const isOpen = item.classList.contains("open");
+
+    document.querySelectorAll(".feature-item").forEach(other => {
+      other.classList.remove("open");
+      const otherTrigger = other.querySelector(".feature-trigger");
+      otherTrigger.setAttribute("aria-expanded", "false");
+      otherTrigger.querySelector("b").textContent = "⌄";
+    });
+
+    if (!isOpen) {
+      item.classList.add("open");
+      trigger.setAttribute("aria-expanded", "true");
+      trigger.querySelector("b").textContent = "⌃";
+    }
+  });
+});
+
+document.querySelectorAll(".faq-item button").forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".faq-item");
+    const open = item.classList.toggle("open");
+    button.setAttribute("aria-expanded", String(open));
+    button.querySelector("b").textContent = open ? "−" : "+";
+  });
+});
